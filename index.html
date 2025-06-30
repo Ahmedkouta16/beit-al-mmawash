@@ -4,74 +4,112 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>بيت المموّش</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Tahoma', sans-serif;
-      background-color: #f8f5f0;
-      color: #333;
+      font-family: 'Tajawal', sans-serif;
+      background-color: #fffdfa;
+      color: #2c2c2c;
+      line-height: 1.8;
     }
     header {
-      background-color: #6e4c2b;
-      color: white;
+      background-color: #3e2723;
+      color: #fff;
       padding: 20px;
       text-align: center;
-      font-size: 2em;
+      font-size: 2.7em;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
     nav {
       display: flex;
       justify-content: center;
-      gap: 20px;
-      background-color: #8c6239;
-      padding: 10px;
+      gap: 40px;
+      background-color: #5d4037;
+      padding: 15px 0;
     }
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
-      font-weight: bold;
+      font-size: 1.2em;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffcc80;
     }
     .hero {
-      background-image: url('https://i.imgur.com/ZQZyqB3.jpg');
+      background-image: url('mamawsh1.jpg');
       background-size: cover;
       background-position: center;
-      height: 400px;
+      height: 60vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: white;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background-color: rgba(0,0,0,0.5);
     }
     .hero h1 {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 10px;
+      position: relative;
       font-size: 3em;
+      z-index: 1;
+      padding: 10px 20px;
+      background-color: rgba(0,0,0,0.4);
+      border-radius: 10px;
     }
     section {
-      padding: 40px 20px;
-      max-width: 800px;
+      padding: 60px 20px;
+      max-width: 1100px;
       margin: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #3e2723;
+      margin-bottom: 30px;
+      font-size: 2.2em;
+    }
+    p {
+      font-size: 1.2em;
+      text-align: center;
+      margin-bottom: 40px;
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 0 20px;
     }
     .gallery img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.04);
     }
     .cta {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 50px;
     }
     .cta a {
-      background-color: #6e4c2b;
+      background-color: #3e2723;
       color: white;
-      padding: 15px 30px;
+      padding: 16px 40px;
       text-decoration: none;
-      border-radius: 5px;
-      font-size: 1.2em;
+      border-radius: 10px;
+      font-size: 1.3em;
+      transition: background 0.3s ease;
+    }
+    .cta a:hover {
+      background-color: #6d4c41;
     }
   </style>
 </head>
@@ -90,22 +128,26 @@
   <section id="about">
     <h2>إيش هو المموش؟</h2>
     <p>
-      المموش طبق كويتي أصيل، يجمع بين الأرز والعدس والبصل والبهارات، وغالباً يُطهى مع الجمبري أو السمك. أكلة فقيرة بالمكونات، غنية بالنكهة والذكريات.
+      المموش طبق كويتي تراثي، يتكون من أرز وعدس وبهارات، يُطهى غالبًا مع الروبيان أو السمك. رغم بساطته، يحمل نكهات الزمن الجميل وأصالة الخليج.
     </p>
   </section>
 
   <section id="types">
-    <h2>أنواع المموّش عندنا</h2>
+    <h2>أنواع المموّش</h2>
     <div class="gallery">
-      <img src="https://i.imgur.com/5HlPFE1.jpg" alt="مموش بالروبيان">
-      <img src="https://i.imgur.com/JZDhqMt.jpg" alt="مموش سمك">
-      <img src="https://i.imgur.com/WKUw3cv.jpg" alt="مموش نباتي">
+      <img src="mamawsh1.jpg" alt="مموش أصيل">
+      <img src="mamawsh2.jpg" alt="مموش روبيان">
+      <img src="mamawsh3.jpg" alt="مموش سمك">
+      <img src="mamawsh4.jpg" alt="مموش تقليدي">
+      <img src="mamawsh5.jpg" alt="مموش فاخر">
+      <img src="mamawsh6.jpg" alt="مموش نباتي">
+      <img src="mamawsh7.jpg" alt="مموش عائلي">
     </div>
   </section>
 
   <section class="cta" id="contact">
-    <h2>جوعان؟ خل نوصلك المموّش لباب بيتك</h2>
-    <a href="https://wa.me/965XXXXXXXX" target="_blank">اطلب على واتساب</a>
+    <h2>جوعان؟ وصلك المموّش لباب بيتك</h2>
+    <a href="https://wa.me/971502123110" target="_blank">راسلنا على واتساب</a>
   </section>
 </body>
 </html>
